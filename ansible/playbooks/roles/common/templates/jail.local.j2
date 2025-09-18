@@ -1,0 +1,29 @@
+# /etc/fail2ban/jail.local
+[DEFAULT]
+# Durée pendant laquelle une IP est bannie (en secondes)
+bantime  = 3600
+# Nombre d'échecs avant le ban
+maxretry = 5
+# Temps pour compter les échecs
+findtime = 600
+# Envoi d’emails (optionnel)
+destemail = root@localhost
+sender = fail2ban@localhost
+mta = sendmail
+banaction = iptables-multiport
+
+# Activer SSH protection
+[sshd]
+enabled = true
+port    = ssh
+filter  = sshd
+logpath = /var/log/auth.log
+maxretry = 5
+
+# Exemple pour protéger Nginx (si nécessaire)
+[nginx-http-auth]
+enabled = true
+port    = http,https
+filter  = nginx-http-auth
+logpath = /var/log/nginx/error.log
+maxretry = 3

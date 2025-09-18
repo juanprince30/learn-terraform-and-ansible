@@ -1,0 +1,59 @@
+# --------------------------
+# Terraform
+# --------------------------
+
+# Dossier contenant les plugins et le cache de Terraform
+.terraform/
+
+# Lock file de Terraform pour assurer la cohérence des versions
+.terraform.lock.hcl
+
+# Fichiers d'état Terraform (sensibles)
+*.tfstate
+*.tfstate.*
+
+# Plans Terraform générés (optionnels)
+*.tfplan
+*.tfplan.*
+
+# --------------------------
+# Variables sensibles
+# --------------------------
+
+# Fichiers de variables contenant des secrets
+*.tfvars
+secret.tf
+secrets/
+
+# Exemple de fichier de variables à versionner
+!example.tfvars
+
+# --------------------------
+# Configuration des éditeurs
+# --------------------------
+
+# Dossiers et fichiers pour VS Code et IntelliJ/IDEA
+.vscode/
+.idea/
+
+# Fichiers temporaires d'édition
+*.swp
+*.swo
+*~
+
+# --------------------------
+# Fichiers système
+# --------------------------
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# --------------------------
+# Logs et crash
+# --------------------------
+
+*.log
+crash.log
