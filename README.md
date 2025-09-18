@@ -104,6 +104,9 @@ terraform & ansible
 
         cd ../ansible
 
+        # Enregistrer un nouveau mot de passe pour le vault
+        ansible-vault create group_vars/all/vault.yml
+
         # Tester la connexion
         ansible -i inventories/hosts webservers -m ping
 
