@@ -1,8 +1,8 @@
 # TERRAFORM & ANSIBLE
+
 Ceci est un exemple de définition d'infrastructure cloud aws avec Terraform et Ansible
 
-######################################################################################
-###########  Structure du projet:  ###########
+## Structure du projet
 
 ```
 terraform & ansible
@@ -80,7 +80,7 @@ terraform & ansible
 
 ```
 
-#######Commandes utiles:############
+## Commandes utiles
 
 
 1. Déployer l'infrastructure avec Terraform :
